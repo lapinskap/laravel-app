@@ -21,15 +21,26 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+
+By creating this application I wanted to learn some CRUD. This is an interesting comparison to the applications that I created in rails.
+These frameworks have many similarities.
+
+It's my first experience with laravel.
+
 
 ## Screenshots
+
+URL: http://localhost:8000/products/create
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen1.jpg)
 
+
+If you submit the form without any value then, you can see the errors like below image.
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen2.jpg)
 
+If you fill all the values then, you will redirect to this page with the success message. 
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen4.jpg)
 
+URL: http://localhost:8000/products
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen3.jpg)
 
 ## Technologies
