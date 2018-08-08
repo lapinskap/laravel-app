@@ -30,6 +30,8 @@
             <button type="submit" class="btn btn-success" style="margin-left:38px">Add Product</button>
           </div>
         </div>
+        <form method="post" action="{{url('products')}}">
+        {{csrf_field()}}
       </form>
     </div>
   </body>
