@@ -13,7 +13,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all()->toArray();
+        return view('products.index', compact('products'));
     }
 
     /**
@@ -32,16 +33,15 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        $product = $this->validate(request(), [
-          'name' => 'required',
-          'price' => 'required|numeric'
-        ]);
-        
-        Product::create($product);
-
-        return back()->with('success', 'Product has been added');;
+          $product = $this->validate(request(), [
+            'name' => 'required',
+            'price' => 'required|numeric'
+          ]);
+          Product::create($product);
+          return back()->with('success', 'Product has been added');
     }
 
     /**
