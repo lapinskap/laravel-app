@@ -8,7 +8,7 @@
 </p>
 
 # laravel-app
-> Here goes your awesome project description!
+> Simple Laravel 5.5 application with CRUD - stores products and its price 
 
 ## Table of contents
 * [General info](#general-info)
@@ -28,9 +28,9 @@ Add more general information about project. What the purpose of the project is? 
 
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen2.jpg)
 
-![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen3.jpg)
-
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen4.jpg)
+
+![Example screenshot](https://raw.githubusercontent.com/lapinskap/laravel-app/master/img/screen3.jpg)
 
 ## Technologies
 * Laravel 5.5 - PHP framework
@@ -45,7 +45,7 @@ $ composer update
 ```
 > "$" is not part of a command, just bash symbol
 
-Next: Configure the database in the .env file - mine is `pgsql`
+Next: Configure the database in the `.env` file - mine is `pgsql`
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
@@ -62,25 +62,32 @@ $ php artisan serve
 ```
 Finally: Switch to the URL: http://localhost:8000/products/create
 
+#### Additional setup you may don't know but you need it
+Few things to install:
+
+PHP 7
+
+Composer
+
+PostgreSQL (or another database)
+
 ## Code Examples
 Show examples of usage:
 `put-your-code-here`
 
 ## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* PostgreSQL database
+* Laravel, yay
+* Awesome feature 3?
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: _finished_
 
 ## Inspiration
-Add here credits. Project inspired by..., based on...
+Project based on [Laravel tutorial](https://appdividend.com/2017/08/20/laravel-5-5-tutorial-example/)
+
+
 
 ## Contact
 Created by [@lapinskap](https://www.facebook.com/paulina.lapinska99) - feel free to contact me!
