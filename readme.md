@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-# Project Name
+# laravel-app
 > Here goes your awesome project description!
 
 ## Table of contents
@@ -27,12 +27,34 @@ Add more general information about project. What the purpose of the project is? 
 ![Example screenshot](./img/screenshot.png)
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Laravel 5.5 - PHP framework
+* Some Bootstrap
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+Type in your terminal: 
+```
+$ git clone https://github.com/lapinskap/laravel-app.git
+$ cd laravel-app
+$ composer update
+```
+> "$" is not part of a command, just bash symbol
+
+Next: Configure the database in the .env file - mine is `pgsql`
+```
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=laravel55
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
+```
+> Probably you'll need to create your own (blank) database, then type it's name in `.env` file. Php will create tables inside. 
+
+Start the Laravel development server:
+```
+$ php artisan serve
+```
+Finally: Switch to the URL: http://localhost:8000/products/create
 
 ## Code Examples
 Show examples of usage:
