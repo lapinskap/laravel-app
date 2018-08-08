@@ -81,19 +81,49 @@ $ php artisan serve
 ```
 Finally: Switch to the URL: http://localhost:8000/products/create
 
-#### Additional setup you may don't know but you need it
+#### Additional setup you may don't know but you already need it
 Few things to install:
 
-PHP 7
+PHP 7 and Composer:
 
-Composer
+[Windows 10](http://kizu514.com/blog/install-php7-and-composer-on-windows-10/)
 
-PostgreSQL (or another database)
+[PostgreSQL](https://www.postgresql.org/) (or another database)
+
+[pgAdmin III](https://www.pgadmin.org/download/)
 
 ## Code Examples
-Show examples of usage:
-`put-your-code-here`
 
+app/Http/Controllers/ProductController.php
+
+```php
+public function store(Request $request)
+    {
+          $product = $this->validate(request(), [
+            'name' => 'required',
+            'price' => 'required|numeric'
+          ]);
+          Product::create($product);
+          return back()->with('success', 'Product has been added');
+    }
+```
+
+
+CRUD - update function looks as follows:
+```php
+public function update(Request $request, $id)
+    {
+        $product = Product::find($id);
+        $this->validate(request(), [
+          'name' => 'required',
+          'price' => 'required|numeric'
+        ]);
+        $product->name = $request->get('name');
+        $product->price = $request->get('price');
+        $product->save();
+        return redirect('products')->with('success','Product has been updated');
+    }
+```
 ## Features
 * PostgreSQL database
 * Laravel, yay
